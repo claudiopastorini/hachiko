@@ -65,7 +65,7 @@ class AIOWatchdog(object):
 
         evh = event_handler or AIOEventHandler()
 
-        self._observer.schedule(evh, path, recursive)
+        self._observer.schedule(evh, path=path, recursive=recursive)
 
     def start(self):
         self._observer.start()
